@@ -1,6 +1,7 @@
-body {
+﻿body {
     margin: 0 auto;
     height: 100%;
+    width: 1280px;
 }
 header {
     min-width: 1280px;
@@ -25,30 +26,30 @@ h1{
     margin: 0px;
     font-family: Arial;
     padding-bottom: 51px;
-color:  #ffffff;
-font-size: 60px;
-font-weight: 400;
-text-align: left;
-text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
-}
-header i {
-    width: 25px;
-    height: 19px;
+    color:  #ffffff;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: left;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
 }
 .header ul {
     display: block;
-    list-style-type: none;
     padding: 0%;
     margin: 0px;
 }
-.header li {
+.header ul li {
+    list-style: none;
     font-family: Arial;
-color:  #ffffff;
-font-size: 20px;
-font-weight: 400;
-line-height: 36px;
-text-align: left;
-text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+    color:  #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+}
+.header ul li::before {
+   content: url("../img/check\ icon.png");
+    margin: 0 10px 0 0;
 }
 section {
     display: flex;
@@ -71,12 +72,12 @@ section {
 } 
 h2 {
    
-font-family: Arial;
-color:  #445161;
-font-size: 30px;
-font-weight: 400;
-line-height: 36px;
-text-align: left;
+    font-family: Arial;
+    color:  #445161;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
 }
 .about h2 {
     margin: 0px;
@@ -116,26 +117,36 @@ text-align: left;
     
 .dignity div {
     margin: 0px;
-    width: 567px;
+    width: 526px;
 }
+
 summary {
     padding-bottom: 35px;
+    padding-left: 9px;
+    outline: none;
+    position: relative;
 }
 summary::-webkit-details-marker {
     display: none;
+
   }
   summary:after {
+    display: block;
     background:   #445161;
     width: 32px;
     height: 32px;
     content: "+"; 
     color: #fff; 
     float: left; 
-    font-size: 1.5em; 
+    right: 2px;
+    position: absolute;
+    top: 0;
+    left: -32px;
+    font-size: 30px; 
     font-weight: bold; 
-    margin: -5px 10px 0 0; 
-    padding: 0; 
-    text-align: center; 
+    /*margin: -5px 10px 0 0;*/ 
+    padding: 0px;
+    text-align: center;
   }
   details[open] summary:after {
     content: "-";
@@ -178,20 +189,20 @@ figure h3 {
     margin: 0px ;
     padding-bottom: 15px;
     font-family: Arial;
-color:  #445161;
-font-size: 24px;
-font-weight: 400;
-line-height: 30px;
-text-align: left;
+    color:  #445161;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
 }
 
-/*reviews"*/ /* треуголник????*/
+/*reviews"*/ 
 .reviews  {
     margin: 0px;
     padding: 50px;
     background-color: rgb(230, 227, 227);
 }
-.reviews div {
+.reviews {
     padding-bottom: 24px;
     padding-top: 0px;
     padding-right: 0px;
@@ -207,43 +218,54 @@ text-align: left;
     text-align: center;
 }
 .img {
-    padding-right: 16px;
+    /*padding-right: 16px;*/
     margin: 0px;
     border-radius: 50%;
-background-color:  #445161;
-width: 75px;
-height: 75px;
-margin-right: 16px;
+    background-color:  #445161;
+    width: 75px;
+    height: 75px;
+    margin-right: 16px;
 }
 .reviews p{
     padding-top: 16px;
     padding-left: 20px;
     margin: 0px;
-    width: 483px;
+    width: 467px;
     border-radius: 10px;
+    position: relative;
     background-color: rgb(179, 174, 174);
+    border: 1px solid rgb(179, 174, 174);
     font-family: Arial;
-color:  #333333;
-font-size: 14px;
-font-style: italic;
-line-height: 18px;
-text-align: left;
+    color:  #333333;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 18px;
+    text-align: left;
 }
+.reviews p:before {
+    content: "";
+    display: block;
+    border: 15px solid transparent;	
+    border-right: 15px solid rgb(179, 174, 174);
+    position: absolute;
+    top: 30px;
+    left: -30px;
+  }
 .reviews span{
     margin: 0px;
     padding-top: 15px;
     padding-bottom: 16px;
     display: block;
     font-family: Arial;
-color:  #989898;
-font-size: 14px;
-font-weight: 400;
-line-height: 18px;
-text-align: left;
+    color:  #989898;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
 }
 
-/*buyitnow*/
-.buyitnow {
+/*buy_it_now*/
+.buy_it_now {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -251,13 +273,13 @@ text-align: left;
     padding: 50px 145px;
     
 }
-.buyitnow h2 {
+.buy_it_now h2 {
     width: 100%;
     text-align: center;
     margin: 0px;
     /*margin-top: 50px;*/
 }
-.buyitnow div {
+.buy_it_now div {
     background-color: rgb(68, 81, 98);
     width: 300px;
     height: 499px;
@@ -273,71 +295,83 @@ text-align: left;
     max-height: 404px;
 }
 
-.buyitnow span {
+.buy_it_now span {
     padding-left: 105px;
     font-family: Arial;
-color:  #ffffff;
-font-size: 24px;
-font-weight: 400;
-line-height: 30px;
-text-align: center;
+    color:  #ffffff;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
 }
 
 #pryace {
     display: block;
-    height: 53px;
     margin: 0px;
     padding-left: 0px;
     padding-top: 18px;
+    padding-bottom: 18px;
     background-color: white;
-color:  #445162;
-font-size: 40px;
-font-weight: 400;
+    color:  #445162;
+    font-size: 40px;
+    font-weight: 400;
+    box-sizing: border-box;
+    
 }
 .buy_it_now ol{
     font-family: Arial;
-color:  #ffffff;
-font-size: 14px;
-font-weight: 400;
-line-height: 24px;
-text-align: left;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
 }
 .buy_it_now a{
     text-decoration: none;
     margin: 20px;
-    display: block;
+    display: flex;
     border-radius: 5px;
     background-color:  #ffffff;
     width: 260px;
     height: 40px;
     font-family: Arial;
-color:  #445161;
-font-size: 18px;
-font-weight: 700;
-line-height: 18px;
-    font-variant: small-caps;
+    color:  #445161;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+}
+#button {
+    margin: auto;
+    padding: 0;
+    font-family: Arial;
+    color:  #445161;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
     text-align: center;
 }
 
 /*footer*/
 .footer_Form{
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-background-color: rgb(68, 81, 97);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(68, 81, 97);
 }
 .form {
     display: flex;
     flex-direction: column;
-    margin-left: 249px;
-    margin-top: 0px;
+    margin: 0;
+    padding-left: 249px;
 }
 .footer_Form h2 {
-    margin-left: 333px;
-    margin-bottom: 31px;
-    margin-top: 53px;
-flex-direction: column;
-color:  #ffffff;
+    margin: 0;
+    padding: 53px 0 31px 333px ;
+    flex-direction: column;
+    color:  #ffffff;
 }
 .form form {
     display: flex;
@@ -346,54 +380,61 @@ color:  #ffffff;
 }
 .form input{
     border-radius: 5px;
-background-color:  #ffffff;
-width: 500px;
-height: 40px;
-margin-bottom: 21px;
-font-family: Arial;
-color:  #445162;
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-text-align: left;
+    background-color:  #ffffff;
+    width: 500px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    /*height: 40px;*/
+    margin-bottom: 21px;
+    font-family: Arial;
+    color:  #445162;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
 }
 textarea {
-border-radius: 5px;
-background-color:  #ffffff;
-width: 500px;
-height: 170px;
-margin-top: 1px;
-margin-bottom: 21px;
-font-family: Arial;
-color:  #445162;
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-text-align: left;
+    border-radius: 5px;
+    background-color:  #ffffff;
+    width: 500px;
+    /* height: 170px; */
+    margin-top: 1px;
+    margin-bottom: 21px;
+    font-family: Arial;
+    color:  #445162;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
 }
  #submit {
-margin-left: 180px;
-border-radius: 5px;
-background-color:  #ffffff;
-width: 140px;
-height: 40px;
-font-variant: small-caps;
-font-weight: 700;
-line-height: 24px;
-text-align: center;
+    margin-left: 180px;
+    border-radius: 5px;
+    background-color:  #ffffff;
+    width: 140px;
+    /* height: 40px; */
+    font-variant: small-caps;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
 }
 .adress {
     margin-left: 46px;
     margin-top: 106px;
 }
-.adress i {
-    width: 24px;
-    height: 26px;
+.adress ul li i {
+    color: white;
+    padding-right: 5px;
+}
+#icq::before{
+    padding-right: 5px;
+    content: url(../img/icq\ icon.png)
 }
 .adress ul {
-    display: block;
+    /*display: block;*/
     list-style-type: none;
-    padding: 0%;
+    /*padding-bottom: 32px;*/
+    padding-left: 0px;
     margin: 0px;
     font-family: Arial;
     color:  #ffffff;
@@ -402,15 +443,27 @@ text-align: center;
     line-height: 24px;
     text-align: left;
 }
+.adress ul li {
+    padding-bottom: 21px;
+    height: 26px;
+}
+.adress ul li:last-child {
+    padding-bottom: 32px;
+    }
+.fab {
+    height: 42px;
+    padding-right: 10px;
+    color: #ffffff;
+}
 .copyright {
-display: flex;
-flex-direction: row;
-justify-content: center;
-font-family: Arial;
-color:  #445162;
-font-size: 12px;
-font-weight: 400;
-letter-spacing: 0.3px;
-line-height: 24px;
-text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: Arial;
+    color:  #445162;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+    text-align: center;
 }
