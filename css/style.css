@@ -11,7 +11,7 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-image: url(img/photo.jpg);
+    background-image: url(/img/photo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -517,6 +517,16 @@ text-align: center;
 text-decoration: none;
 text-transform: uppercase;
 }
+.btn_our:hover {
+    background-color: rgb(130, 64, 133);
+    color: #445162;
+    }
+.btn_our:active { 
+    background-color:  #653267;
+    color: #445162;
+    border-color: #fff;
+    }
+
 .video{
 padding-top: 80px;
 }
