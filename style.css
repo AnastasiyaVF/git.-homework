@@ -1260,23 +1260,34 @@ color:  #959595;
 }
 
 .low1 li::after {
+	border-left: 2px solid #111111;
 	position: absolute;
 	content: "";
 	top: 0px;
-	left: 0px;
+	right: -9px;
 	width: 2px;
 	height: 14px;
-	background-color:  #242424;
 }
-
-.low2 li:after {
+.low1 li:nth-child(2n)::after {
+	border-left: 2px solid #242424;	
+}
+.low1 li:nth-child(3n)::after {
+	border-left: 2px solid #242424;	
+}
+.low1 li:nth-child(4n)::after {
+	border-left: 2px solid #242424;	
+}
+.low2 li::after {
+	border-left: 2px solid #111111;
 	position: absolute;
 	content: "";
 	top: 0px;
-	left: 0px;
+	right: -6px;
 	width: 2px;
 	height: 14px;
-	background-color:  #242424;
+}
+.low2 li:nth-child(3n)::after {
+	border-left: 2px solid #242424;	
 }
 
 .low1 {
